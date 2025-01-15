@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.card {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: serif;
+  background-color: white;
+  color: black;
+}
+
+/* styles/globals.css or module css */
+.heading-with-lines {
+  position: relative;
+
+  padding: 4px;
+}
+
+.heading-with-lines::before,
+.heading-with-lines::after {
+  content: "";
+  display: inline-block;
+  width: 15%;
+  height: 6px;
+  background-color: #e0c080;
+  vertical-align: middle;
+
+  margin: 0 15px;
+}
+
+/* styles/globals.css or module css */
+.heading-with-line-about {
+  position: relative;
+  text-align: start;
+
+  padding: 3px;
+}
+
+.heading-with-line-about::before {
+  content: "";
+  display: inline-block;
+  width: 10%;
+  height: 5px;
+  background-color: #e0c080;
+  vertical-align: middle;
+  margin-right: 10px; /* Space between the line and the heading text */
+}
+
+/* styles/globals.css or module css */
+.heading-with-verticalLine-about {
+  position: relative;
+  text-align: start;
+  padding: 3px;
+}
+
+.heading-with-verticalLine-about::before {
+  content: "";
+  display: inline-block;
+  width: 6px; /* Width of the vertical line */
+  height: 120%; /* Full height of the heading */
+  background-color: #e0c080;
+  vertical-align: middle;
+  margin-right: 15px; /* Space between the text and the vertical line */
+}
+
+.heading-below-the-line {
+  position: relative;
+  text-align: center;
+  padding: 3px;
+}
+
+/* Center the line below the text */
+.heading-below-the-line::after {
+  content: "";
+  display: block;
+  width: 30%;
+  height: 6px;
+  background-color: #e0c080;
+  position: absolute;
+  bottom: -4px; /* Adjust the distance below the text */
+  left: 50%;
+  transform: translateX(-50%); /* Center the line */
+}
